@@ -1,0 +1,46 @@
+Serverless Framework
+
+Summary:
+Node JS sample handler lambda function execution with serverless framework with local set up. The same can be deployed as AWS lambda.
+
+Prerequisites
+•	Node JS (https://nodejs.org/en/download/)
+•	Server less Framework (npm install serverless -g)
+•	Python(Any stable Version)
+•	Visual Studio (Optional)
+•	Commands (https://serverless.com/framework/docs/providers/aws/cli-reference/)
+•	AWS CLI download.
+•	Check Commands (node –v, sls -v) for versions.
+•	Supports the NodeJs, Python & Java.
+
+How to create the node JS project
+•	Create
+Command: serverless create --template aws-nodejs.
+This will create the project files with AWS node format of serverless.yml
+
+
+
+
+
+Folder View: It will create the basic files for AWS Node Project.
+ 
+•	Execute
+Command 1: serverless invoke local --function functionName
+	        functionName is our node JS function, That will be there in handler.js
+handler.js
+ 
+
+Serveless.yml
+ 	
+
+	
+ 
+
+Command 2: serverless invoke local --function functionName –data 1234
+
+ 
+
+There are multiple types of data as part of input string, here are some.
+serverless invoke local --function functionName --data "hello world"
+serverless invoke local --function functionName --data '{"a":"bar"}'
+serverless invoke local --function functionName --path lib/data.json
